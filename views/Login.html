@@ -1,0 +1,20 @@
+
+<div ng-controller="Login">
+  <form  class="ng-pristine ng-valid" required>
+    <label>User name</label>
+    <input type="text" ng-model="username" class="ng-pristine ng-valid" required>
+    <label>Password</label>
+    <input type="password" ng-model="password" class="ng-pristine ng-valid" required>
+ 
+    <br/><br/>
+    {{UserError}}
+       
+    <button class="btn btn-success" ng-click="loginSubmit()">Submit</button>
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+  </form>
+  
+</div>
+
+<div ng-controller="FacebookLogin">
+  <button ng-click="FBLogin()">FaceBook Login</button>
+</div>

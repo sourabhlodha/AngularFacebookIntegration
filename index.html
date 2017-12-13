@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Page title set in pageTitle directive -->
+    <title page-title></title>
+
+    <!-- Bootstrap -->
+    <link href="app/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Main  CSS files -->
+    <link href="app/css/animate.css" rel="stylesheet">
+    <!-- top nev css -->
+    <link id="mainCss" href="app/css/main.css" rel="stylesheet">
+
+
+
+</head>
+
+<!-- ControllerAs syntax -->
+<!-- Main controller with serveral data used in  theme on diferent view -->
+
+<body ng-controller="MainCtrl as main" class="{{$state.current.data.specialClass}}">
+
+    <!-- include header -->
+    <div ng-include="'views/common/header.html'"></div>
+    <!-- Main view  -->
+    <div ui-view></div>
+
+
+    <!-- jQuery and Bootstrap -->
+    <script src="app/js/jquery/jquery-3.1.1.min.js"></script>  
+    <script src="app/js/bootstrap/bootstrap.min.js"></script>
+
+
+    
+
+    <!-- Main Angular scripts-->
+    <script src="app/js/angular/angular.min.js"></script>
+    <script src="app/js/plugins/oclazyload/dist/ocLazyLoad.min.js"></script>
+    <script src="app/js/ui-router/angular-ui-router.min.js"></script>
+    <script src="app/js/angular/angular-animate.min.js"></script>
+    <script src="app/js/bootstrap/ui-bootstrap-tpls-1.1.2.min.js"></script>
+
+    <!-- Anglar App Script -->
+    <script src="app/js/app.js"></script>
+    <script src="app/js/config.js"></script>
+    <script src="app/js/controllers.js"></script>
+    <script src="app/js/directives.js"></script>
+
+
+</body>
+
+</html>
