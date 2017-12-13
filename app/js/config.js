@@ -39,4 +39,5 @@ angular
         $rootScope.$state = $state;
          $rootScope.userLogin = "no";
         $rootScope.LoginUser = "";
+        $rootScope.Testdata="";
     });

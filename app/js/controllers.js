@@ -71,6 +71,7 @@ function FacebookLogin($scope, $rootScope, $http, $location) {
      FB.api('/me', function(response) {
        console.log('Good to see you, ' + response.name + '.');
        console.log(response);
+     
        var accesstoken=FB.getAuthResponse();
        console.log(accesstoken);
      });
@@ -80,6 +81,7 @@ function FacebookLogin($scope, $rootScope, $http, $location) {
   {"fields":"about,gender,friendlists,friends,relationship_status,email,birthday,name,picture,education,albums"},
   function(response) {
       console.log(response);
+      $rootScope.Testdata=response;
   }
 );
     } else {
@@ -93,11 +95,14 @@ function FacebookLogin($scope, $rootScope, $http, $location) {
 
 //-----------------DashBoard -----------------
 function DashBoard($scope, $rootScope, $http) {
-   
-   
-
-
-}
+      console.log("inside dashboard ");
+   console.log($rootScope.Testdata);
+  
+     /* $scope.print = function () {
+ 
+      }*/
+ return $scope.UserData=$rootScope.Testdata;
+};
 
 
 
